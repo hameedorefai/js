@@ -1,0 +1,29 @@
+async function logPageVisit() {
+    const newData ={
+        currentPage: 'Current Page: ' + window.location.href,
+    message: 'User Has Clicked On The Join Facebook Group Button'
+    }
+    try {
+   const response = fetch('https://zplatform.azurewebsites.net/api/Log/loginfo', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newData)
+    });
+    
+    const data = await response.text();
+    console.log('Log success:', data);
+
+} catch (error) {
+    console.error('Error logging page visit:', error);
+}
+}
+
+
+// التعامل مع الحدث للنقر على الرابط
+document.getElementById('join-facebook-group-button').addEventListener('click', (event) => {
+    event.preventDefault(); // منع الانتقال مباشرةً
+     logPageVisit();
+    window.open('https://www.facebook.com/groups/zamayl', '_blank'); // فتح الرابط في نافذة جديدة
+});
