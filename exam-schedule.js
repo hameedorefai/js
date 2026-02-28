@@ -4,7 +4,7 @@
  */
 
 // عنوان API
-const API_URL = 'https://zplatform.azurewebsites.net/api/ExamSchedule/student';
+const API_URL = 'https://zplatform2.azurewebsites.net/api/ExamSchedule/student';
 
 // المصفوفة التي ستحتوي على بيانات جدول الامتحانات
 let examScheduleData = [];
@@ -330,3 +330,4 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('filterMid').addEventListener('click', () => setFilter('mid'));
     document.getElementById('filterFinal').addEventListener('click', () => setFilter('final'));
 });
+
