@@ -2,7 +2,7 @@
 
 class LoginManager {
     constructor() {
-        this.apiBaseUrl = 'https://zplatform.azurewebsites.net/api';
+        this.apiBaseUrl = 'https://zplatform2.azurewebsites.net/api';
         this.init();
     }
 
@@ -330,3 +330,4 @@ function togglePassword(inputId) {
         window.loginManager.togglePassword(inputId);
     }
 }
+
