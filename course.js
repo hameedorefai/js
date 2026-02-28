@@ -7,7 +7,7 @@ async function getCourse() {
     const courseId = await getParam('id') || null;
     if (courseId) {
         try {
-            const response = await fetch('https://zplatform.azurewebsites.net/api/Course/CourseNo/' + courseId);
+            const response = await fetch('https://zplatform2.azurewebsites.net/api/Course/CourseNo/' + courseId);
             if (!response.ok) {
                 setAlert('alert', 'لم يتم العثور على هذه المادة');
                 return;
@@ -311,7 +311,7 @@ async function addCourseNote() {
             throw new Error('لم يتم العثور على رمز التوثيق');
         }
 
-        const response = await fetch('https://zplatform.azurewebsites.net/api/StudentNotes', {
+        const response = await fetch('https://zplatform2.azurewebsites.net/api/StudentNotes', {
             method: 'POST',
             headers: {
                 'accept': 'text/plain',
@@ -441,7 +441,7 @@ async function onAddCourseClick(e) {
     btn.innerHTML = `<span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span> جاري الحفظ...`;
 
     try {
-        const url = `https://zplatform.azurewebsites.net/api/StudentCourse/add-course?courseID=${encodeURIComponent(courseGuid)}`;
+        const url = `https://zplatform2.azurewebsites.net/api/StudentCourse/add-course?courseID=${encodeURIComponent(courseGuid)}`;
         const res = await fetch(url, {
             method: 'POST',
             headers: {
@@ -481,3 +481,4 @@ async function onAddCourseClick(e) {
 async function safeReadText(res) {
     try { return await res.text(); } catch { return ''; }
 }
+
