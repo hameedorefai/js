@@ -4,7 +4,7 @@ async function logPageVisit() {
     message: 'User Has Clicked On The Join Facebook Group Button'
     }
     try {
-   const response = fetch('https://zplatform.azurewebsites.net/api/Log/loginfo', {
+   const response = fetch('https://zplatform2.azurewebsites.net/api/Log/loginfo', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -27,3 +27,4 @@ document.getElementById('join-facebook-group-button').addEventListener('click', 
      logPageVisit();
     window.open('https://www.facebook.com/groups/zamayl', '_blank'); // فتح الرابط في نافذة جديدة
 });
+
