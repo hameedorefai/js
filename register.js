@@ -5,7 +5,7 @@ class RegisterManager {
         this.currentStep = 1;
         this.totalSteps = 3;
         this.majors = [];
-        this.apiBaseUrl = 'https://zplatform.azurewebsites.net/api';
+        this.apiBaseUrl = 'https://zplatform2.azurewebsites.net/api';
         this.formData = {
             studentID: '',
             fullName: '',
@@ -631,7 +631,7 @@ class RegisterManager {
             }
             
             // الخطوة 1: الحصول على SAS URL للرفع
-            const sasResponse = await fetch(`https://zplatform.azurewebsites.net/api/UserProfile/generateProfilePictureUploadSas`, {
+            const sasResponse = await fetch(`https://zplatform2.azurewebsites.net/api/UserProfile/generateProfilePictureUploadSas`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -670,7 +670,7 @@ class RegisterManager {
             this.showAlert('جاري تحديث الملف الشخصي...', 'info');
             
             // الخطوة 3: تحديث رابط الصورة في قاعدة البيانات
-            const updateResponse = await fetch(`https://zplatform.azurewebsites.net/api/UserProfile/ProfilePicture/${guid}`, {
+            const updateResponse = await fetch(`https://zplatform2.azurewebsites.net/api/UserProfile/ProfilePicture/${guid}`, {
                 method: 'PUT',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -740,3 +740,4 @@ function togglePassword(inputId) {
         window.registerManager.togglePassword(inputId);
     }
 }
+
