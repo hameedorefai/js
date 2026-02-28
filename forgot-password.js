@@ -7,7 +7,7 @@ let temporaryData = {
 };
 
 // API Base URL
-const API_BASE_URL = 'https://zplatform.azurewebsites.net/api';
+const API_BASE_URL = 'https://zplatform2.azurewebsites.net/api';
 
 // عناصر DOM
 const stepProgress = document.getElementById('stepProgress');
@@ -421,3 +421,4 @@ otpCodeInput.addEventListener('input', function(e) {
 studentIdInput.addEventListener('input', function(e) {
     this.value = this.value.replace(/[^0-9]/g, '');
 });
+
