@@ -1,5 +1,5 @@
 // تكوين الـ API
-const API_BASE_URL = 'https://zplatform.azurewebsites.net/api';
+const API_BASE_URL = 'https://zplatform2.azurewebsites.net/api';
 
 // تحقق من صحة التوكن
 function isTokenValid() {
@@ -409,3 +409,4 @@ function showToast(message, type = 'primary') {
     const bsToast = new bootstrap.Toast(toast);
     bsToast.show();
 }
+
