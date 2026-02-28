@@ -4,7 +4,7 @@ class AuthManager {
     constructor() {
         this.branches = [];
         this.majors = [];
-        this.apiBaseUrl = 'https://zplatform.azurewebsites.net/api';
+        this.apiBaseUrl = 'https://zplatform2.azurewebsites.net/api';
         this.init();
     }
 
@@ -364,3 +364,4 @@ window.togglePassword = function(inputId) {
         window.authManager.togglePassword(inputId);
     }
 };
+
