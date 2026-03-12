@@ -127,12 +127,12 @@ function setDataCourse(data) {
                                         </tr>`);
         });*/
             elements.push(`<tr>
-                                            <td>""</td>
-                                            <td>""</td>
-                                            <td>""</td>
-                                            <td>""</td>
-                                            <td>""</td>
-                                            <td>""</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
                                         </tr>`);
                                             });
         if (data.examSchedule.midExamSchedules.length > 1) {
@@ -491,5 +491,6 @@ async function onAddCourseClick(e) {
 async function safeReadText(res) {
     try { return await res.text(); } catch { return ''; }
 }
+
 
 
