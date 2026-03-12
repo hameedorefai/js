@@ -115,8 +115,9 @@ function setDataCourse(data) {
                                     </thead><tbody>`);
 
 
+     
         data.examSchedule.midExamSchedules.map((c, i) => {
-            elements.push(`<tr>
+        /*    elements.push(`<tr>
                                             <td>${c.examDay}</td>
                                             <td>${getDate(c.examDate)}</td>
                                             <td>${getDateTime(c.examDate)}</td>
@@ -124,7 +125,16 @@ function setDataCourse(data) {
                                             <td>${data.mechanismDTO.midtermExamCorrectBy}</td>
                                             <td>${c.remainingTime}</td>
                                         </tr>`);
-        });
+        });*/
+            elements.push(`<tr>
+                                            <td>""</td>
+                                            <td>""</td>
+                                            <td>""</td>
+                                            <td>""</td>
+                                            <td>""</td>
+                                            <td>""</td>
+                                        </tr>`);
+                                            });
         if (data.examSchedule.midExamSchedules.length > 1) {
             elements.push(`<tr><td colspan="7" class="text-center">قد يتوفر أكثر من موعد في بعض المواد, لذا يرجى التأكد من موعد امتحانك عبر البوابة الأكاديمية حين نشره.</td></tr>`);
         }
@@ -481,4 +491,5 @@ async function onAddCourseClick(e) {
 async function safeReadText(res) {
     try { return await res.text(); } catch { return ''; }
 }
+
 
