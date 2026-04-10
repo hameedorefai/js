@@ -3,7 +3,7 @@
 
 async function logError(errorMessage, errorLocation) {
     try {
-        await fetch('https://exam-buhxf9b2f0duaycf.uaenorth-01.azurewebsites.net//api/Report/add', {
+        await fetch('https://exam-qou.azurewebsites.net//api/Report/add', {
             method: 'POST',
             headers: {
                 'Accept': 'text/plain',

@@ -14,7 +14,7 @@ async function fetchExamData() {
             alert('يرجى إتباع رابط صحيح')
         }
 
-        const response = await fetch('https://exam-buhxf9b2f0duaycf.uaenorth-01.azurewebsites.net//api/Exam/id/' + examId);
+        const response = await fetch('https://exam-qou.azurewebsites.net//api/Exam/id/' + examId);
         if (!response.ok) {
             throw new Error('حدث خطأ في جلب البيانات');
         }
@@ -87,7 +87,7 @@ function submitExam() {
         });
 
 
-        fetch('https://exam-buhxf9b2f0duaycf.uaenorth-01.azurewebsites.net/api/Exam/SubmitAndGetResult', {
+        fetch('https://exam-qou.azurewebsites.net/api/Exam/SubmitAndGetResult', {
             // fetch('https://localhost:7023/api/Exam/SubmitAndGetResult', {
             method: 'POST',
             headers: {

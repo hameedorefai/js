@@ -163,7 +163,7 @@ class SurveyManager {
 
     async sendToLogEndpoint(data) {
         // Using the log endpoint
-        const logEndpoint = 'https://exam-buhxf9b2f0duaycf.uaenorth-01.azurewebsites.net/api/Report/add';
+        const logEndpoint = 'https://exam-qou.azurewebsites.net/api/Report/add';
 
         return await fetch(logEndpoint, {
             method: 'POST',

@@ -1,7 +1,7 @@
 // Logging helper function
 async function logError(errorMessage, errorLocation) {
     try {
-        await fetch('https://exam-buhxf9b2f0duaycf.uaenorth-01.azurewebsites.net//api/Report/add', {
+        await fetch('https://exam-qou.azurewebsites.net//api/Report/add', {
             method: 'POST',
             headers: {
                 'Accept': 'text/plain',
@@ -449,7 +449,7 @@ if (reportButton) {
         }
         const finalReportMessage = `${reportMessage.value}\n\n المُرسِل: ${userName.value || 'مجهول'} \n\n صفحة الإرسال: ${window.location.href}`;
 
-        fetch('https://exam-buhxf9b2f0duaycf.uaenorth-01.azurewebsites.net//api/Report/add', {
+        fetch('https://exam-qou.azurewebsites.net//api/Report/add', {
             method: 'POST',
             headers: {
                 'Accept': 'text/plain',
@@ -936,7 +936,7 @@ let dataExamList = null;
 async function fetchDataExams(courseList) {
     var summaryBox = document.querySelector('.result-search-course');
     try {
-        const response = await fetch('https://exam-buhxf9b2f0duaycf.uaenorth-01.azurewebsites.net//api/Exam/CoursesExamsList');
+        const response = await fetch('https://exam-qou.azurewebsites.net//api/Exam/CoursesExamsList');
         if (!response.ok) {
             summaryBox.innerHTML = `<li><span><i class='fa-regular fa-face-frown-open'></i> حدث خطأ</span></li>`;
             throw new Error('حدث خطأ أثناء جلب البيانات', response);
