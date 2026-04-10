@@ -1459,7 +1459,7 @@ try {
     // إرسال الطلب إلى API
     try {
         const response = await fetch(
-            `https://easyhomeworkpdf.azurewebsites.net/api/CreateImageAndConvertToPdf?code=jBWEEc0RKWUxrEmWeCWG31URkHhGoNhcVxodidQ5AyN0AzFuDdwBkQ==&studentName=${studentName}&studentId=${studentId}&subjectName=${subjectName}&subjectCode=${subjectCode}&instructorName=${instructorName}&sectionNumber=${sectionNumber}`,
+            `https://task-to-pdf.azurewebsites.net/api/CreateImageAndConvertToPdf?code=jBWEEc0RKWUxrEmWeCWG31URkHhGoNhcVxodidQ5AyN0AzFuDdwBkQ==&studentName=${studentName}&studentId=${studentId}&subjectName=${subjectName}&subjectCode=${subjectCode}&instructorName=${instructorName}&sectionNumber=${sectionNumber}`,
          {  
                 method: 'POST',
                 body: formData
