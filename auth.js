@@ -4,7 +4,7 @@ class AuthManager {
     constructor() {
         this.branches = [];
         this.majors = [];
-        this.apiBaseUrl = 'https://zplatform2.azurewebsites.net/api';
+        this.apiBaseUrl = 'https://zamayl7.azurewebsites.net/api';
         this.init();
     }
 

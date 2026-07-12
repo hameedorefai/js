@@ -125,7 +125,7 @@ function calculateFinalMark() {
     }
 
     // داخل دالة calculateFinalMark
-    fetch('https://zplatform2.azurewebsites.net/api/Log/GetFinalMarkStatsAsyncLast24Hours')
+    fetch('https://zamayl7.azurewebsites.net/api/Log/GetFinalMarkStatsAsyncLast24Hours')
         .then(response => response.json())
         .then(data => {
             const currentMark = parseFloat(document.getElementById('finalMarkResult').textContent.replace(/[^\d.]+/g, ''));
@@ -671,7 +671,7 @@ async function fetchDataCourse(text, type) {
         }
     } else {
         try {
-            const response = await fetch('https://zplatform2.azurewebsites.net/api/Course/List');
+            const response = await fetch('https://zamayl7.azurewebsites.net/api/Course/List');
             if (!response.ok) {
                 if (type == 'submit') {
                     summarySearchBox.innerHTML = `<div class="col-12 text-center fw-bold p-5 text-danger">حدث خطأ ما ، يرجى إعادة تحميل الصفحة</div>`;
@@ -1185,7 +1185,7 @@ async function logPageVisit() {
         message: 'User Has Clicked On The Join Facebook Group Button'
     }
     try {
-        fetch('https://zplatform2.azurewebsites.net/api/Log/loginfo', {
+        fetch('https://zamayl7.azurewebsites.net/api/Log/loginfo', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -1214,7 +1214,7 @@ async function logPageVisitByFixedButton() {
         message: 'User Has Clicked On The Join Facebook Group Button By Fixed Button'
     }
     try {
-        fetch('https://zplatform2.azurewebsites.net/api/Log/loginfo', {
+        fetch('https://zamayl7.azurewebsites.net/api/Log/loginfo', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -1409,7 +1409,7 @@ async function handleImageToPdfSubmission(event) {
 
 
 try {
-    const response = await fetch("https://zplatform2.azurewebsites.net/api/Course/List");
+    const response = await fetch("https://zamayl7.azurewebsites.net/api/Course/List");
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -1628,7 +1628,7 @@ async function LogSubmitPDFConvertor() {
         message: 'User Has Clicked On PDF Convertor Button'
     }
     try {
-        fetch('https://zplatform2.azurewebsites.net/api/Log/loginfo', {
+        fetch('https://zamayl7.azurewebsites.net/api/Log/loginfo', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -1656,7 +1656,7 @@ async function LogError(errorText) {
 
     try {
         // انتظار استجابة fetch باستخدام await
-        const response = await fetch('https://zplatform2.azurewebsites.net/api/Log/logerror', {
+        const response = await fetch('https://zamayl7.azurewebsites.net/api/Log/logerror', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

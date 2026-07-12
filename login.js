@@ -2,7 +2,7 @@
 
 class LoginManager {
     constructor() {
-        this.apiBaseUrl = 'https://zplatform2.azurewebsites.net/api';
+        this.apiBaseUrl = 'https://zamayl7.azurewebsites.net/api';
         this.init();
     }
 

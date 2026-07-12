@@ -1,5 +1,5 @@
 // تكوين الـ API
-const API_BASE_URL = 'https://zplatform2.azurewebsites.net/api';
+const API_BASE_URL = 'https://zamayl7.azurewebsites.net/api';
 
 // تحقق من صحة التوكن
 function isTokenValid() {

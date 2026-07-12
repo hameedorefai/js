@@ -4,7 +4,7 @@
  */
 
 // عنوان API
-const API_URL = 'https://zplatform2.azurewebsites.net/api/ExamSchedule/student';
+const API_URL = 'https://zamayl7.azurewebsites.net/api/ExamSchedule/student';
 
 // المصفوفة التي ستحتوي على بيانات جدول الامتحانات
 let examScheduleData = [];
